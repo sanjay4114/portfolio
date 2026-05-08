@@ -1142,3 +1142,9 @@ html[data-theme="light"] .form-select {
   }
 }
 
+
+/* Certifications */
+.cert-card { transition: transform 0.2s ease, box-shadow 0.2s ease; border-radius: var(--radius2); }
+.cert-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.cert-bg-glow { position: absolute; inset: -40%; background: radial-gradient(circle at 50% -20%, rgba(0, 229, 255, 0.15), transparent 70%); opacity: 0; transition: opacity 0.3s ease; pointer-events: none; }
+.cert-card:hover .cert-bg-glow { opacity: 1; }
