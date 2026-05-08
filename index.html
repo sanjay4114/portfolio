@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Sanjay M — Full Stack Java Developer. Portfolio showcasing scalable web applications, RESTful APIs, and modern UI development with Java, Spring Boot, React JS, and MySQL."
+    />
+    <meta name="author" content="Sanjay M" />
+    <meta name="theme-color" content="#0b1020" />
+    <meta property="og:title" content="Sanjay M | Full Stack Java Developer" />
+    <meta
+      property="og:description"
+      content="Motivated Full Stack Java Developer with experience in building scalable web apps using Java, Spring Boot, React JS, and MySQL."
+    />
+    <meta property="og:type" content="website" />
+    <title>Sanjay M | Full Stack Java Developer</title>
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 (CDN only) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- AOS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Page Loader -->
+    <div id="pageLoader" class="page-loader" aria-label="Loading" role="status">
+      <div class="loader-shell">
+        <div class="loader-orbit"></div>
+        <div class="loader-core"></div>
+        <div class="loader-text">
+          <span class="mono">Booting</span>
+          <span class="dots" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom Cursor (subtle) -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <!-- Floating Socials -->
+    <aside class="floating-socials d-none d-md-flex" aria-label="Social links">
+      <a class="social-btn" href="https://github.com/sanjay4114" target="_blank" rel="noreferrer" aria-label="GitHub">
+        <i class="bi bi-github"></i>
+      </a>
+      <a class="social-btn" href="https://www.linkedin.com/in/sanjay-kalaivani-432ab1279" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a class="social-btn" href="#" target="_blank" rel="noreferrer" aria-label="Twitter/X">
+        <i class="bi bi-twitter-x"></i>
+      </a>
+      <a class="social-btn" href="#contact" aria-label="Contact">
+        <i class="bi bi-envelope"></i>
+      </a>
+    </aside>
+
+    <!-- Navbar -->
+    <nav
+      id="mainNav"
+      class="navbar navbar-expand-lg navbar-dark fixed-top nav-glass"
+      aria-label="Primary navigation"
+    >
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#top">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">Sanjay M</span>
+          <span class="badge badge-neon ms-1 d-none d-sm-inline">Portfolio</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navLinks"
+          aria-controls="navLinks"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navLinks">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#journey">Journey</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <button
+                id="themeToggle"
+                class="btn btn-sm btn-outline-neon"
+                type="button"
+                aria-label="Toggle dark/light theme"
+              >
+                <i class="bi bi-moon-stars-fill me-1"></i>
+                <span class="d-none d-sm-inline">Theme</span>
+              </button>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-sm btn-neon" href="#projects">
+                <i class="bi bi-rocket-takeoff me-1"></i> View Work
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="top" class="hero-section position-relative overflow-hidden">
+      <div id="particles" class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-gradient" aria-hidden="true"></div>
+
+      <div class="container position-relative hero-content">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-7">
+            <div
+              class="pill mono"
+              data-aos="fade-up"
+              data-aos-delay="50"
+              data-aos-duration="800"
+            >
+              <i class="bi bi-stars me-2"></i> Java • Spring Boot • React • MySQL
+            </div>
+
+            <h1
+              class="display-4 fw-800 hero-title mt-3"
+              data-aos="fade-up"
+              data-aos-delay="120"
+              data-aos-duration="900"
+            >
+              Full Stack Java Developer crafting scalable web applications with
+              <span class="text-neon">modern technologies</span> and
+              <span class="text-gradient">clean architecture</span>.
+            </h1>
+
+            <p
+              class="lead hero-subtitle mt-3"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="900"
+            >
+              <span class="mono dim">Typing:</span>
+              <span class="typing-wrap">
+                <span id="typingTarget" class="typing-target"></span>
+                <span class="typing-caret" aria-hidden="true">▍</span>
+              </span>
+            </p>
+
+            <div
+              class="d-flex flex-wrap gap-3 mt-4"
+              data-aos="fade-up"
+              data-aos-delay="280"
+              data-aos-duration="900"
+            >
+              <a class="btn btn-neon btn-lg" href="#projects">
+                <i class="bi bi-grid-3x3-gap me-2"></i> View Projects
+              </a>
+              <a class="btn btn-ghost btn-lg" href="#contact">
+                <i class="bi bi-chat-dots me-2"></i> Contact Me
+              </a>
+              <a class="btn btn-outline-neon btn-lg" href="resume.pdf" download>
+                <i class="bi bi-download me-2"></i> Download Resume
+              </a>
+              <a class="btn btn-link btn-link-neon btn-lg" href="#about">
+                Explore <i class="bi bi-arrow-down-short"></i>
+              </a>
+            </div>
+
+            <div
+              class="hero-metrics mt-4"
+              data-aos="fade-up"
+              data-aos-delay="360"
+              data-aos-duration="900"
+            >
+              <div class="metric glass">
+                <div class="metric-value">Fast</div>
+                <div class="metric-label">Performance-first</div>
+              </div>
+              <div class="metric glass">
+                <div class="metric-value">Clean</div>
+                <div class="metric-label">Modular code</div>
+              </div>
+              <div class="metric glass">
+                <div class="metric-value">Premium</div>
+                <div class="metric-label">Recruiter-ready</div>
+              </div>
+            </div>
+
+            <div
+              class="hero-stats row row-cols-2 row-cols-sm-4 g-3 mt-4"
+              data-aos="fade-up"
+              data-aos-delay="430"
+              data-aos-duration="900"
+            >
+              <div class="col">
+                <div class="stat-card glass">
+                  <div class="stat-value" data-count="3">0</div>
+                  <div class="stat-label">Projects</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="stat-card glass">
+                  <div class="stat-value" data-count="1">0</div>
+                  <div class="stat-label">Internships</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="stat-card glass">
+                  <div class="stat-value" data-count="4">0</div>
+                  <div class="stat-label">Certifications</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="stat-card glass">
+                  <div class="stat-value" data-count="1000">0</div>
+                  <div class="stat-label">Hours coded</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div
+              class="glass hero-card"
+              data-aos="zoom-in"
+              data-aos-delay="180"
+              data-aos-duration="1000"
+            >
+              <div class="hero-card-top">
+                <div class="status-dot me-2" aria-hidden="true"></div>
+                <span class="mono">Available for opportunities</span>
+              </div>
+              <div class="hero-card-body mt-3">
+                <div class="id-row">
+                  <div class="avatar-glow" aria-hidden="true">
+                    <div class="avatar-core">
+                      <i class="bi bi-code-slash"></i>
+                    </div>
+                  </div>
+                  <div class="ms-3">
+                    <div class="h5 mb-1 fw-700">Sanjay M</div>
+                    <div class="mono dim">Full Stack Java Developer</div>
+                  </div>
+                </div>
+
+                <div class="divider my-3"></div>
+
+                <div class="d-grid gap-2">
+                  <a class="btn btn-outline-neon" href="#projects">
+                    <i class="bi bi-briefcase me-2"></i> See Case Studies
+                  </a>
+                  <a class="btn btn-outline-soft" href="#contact">
+                    <i class="bi bi-send me-2"></i> Let’s Talk
+                  </a>
+                </div>
+
+                <div class="mini-tech mt-3">
+                  <span class="chip">Java</span>
+                  <span class="chip">Spring Boot</span>
+                  <span class="chip">React JS</span>
+                  <span class="chip">MySQL</span>
+                  <span class="chip">REST APIs</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="scroll-hint d-none d-lg-flex">
+              <span class="mono dim">Scroll</span>
+              <span class="scroll-line" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- About -->
+      <section id="about" class="section-pad">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <div class="section-kicker mono" data-aos="fade-up">About Me</div>
+              <h2 class="section-title mt-2" data-aos="fade-up" data-aos-delay="80">
+                Motivated developer. Scalable solutions. Real-world impact.
+              </h2>
+              <p class="section-lead mt-3" data-aos="fade-up" data-aos-delay="120">
+                I’m <strong>Sanjay M</strong>, a Full Stack Java Developer with hands-on experience in developing scalable web 
+                applications using Java, Spring Boot, React JS, and MySQL. Skilled in building RESTful APIs, implementing 
+                CRUD operations, frontend-backend integration, debugging, API testing, and responsive UI development.
+              </p>
+
+              <div class="about-highlights mt-4" data-aos="fade-up" data-aos-delay="160">
+                <div class="highlight glass">
+                  <i class="bi bi-lightning-charge text-neon"></i>
+                  <div>
+                    <div class="fw-700">RESTful APIs</div>
+                    <div class="dim">Building scalable backend services with Spring Boot.</div>
+                  </div>
+                </div>
+                <div class="highlight glass">
+                  <i class="bi bi-shield-check text-neon"></i>
+                  <div>
+                    <div class="fw-700">Full Stack Integration</div>
+                    <div class="dim">Seamless frontend-backend communication.</div>
+                  </div>
+                </div>
+                <div class="highlight glass">
+                  <i class="bi bi-brush text-neon"></i>
+                  <div>
+                    <div class="fw-700">Responsive UI</div>
+                    <div class="dim">Modern interfaces with React and Bootstrap.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="glass p-4 p-lg-4" data-aos="fade-left" data-aos-duration="900">
+                <div class="d-flex align-items-center justify-content-between">
+                  <div>
+                    <div class="mono dim">Skill Snapshot</div>
+                    <div class="h5 fw-700 mb-0">Strength meter</div>
+                  </div>
+                  <div class="badge badge-neon">Live</div>
+                </div>
+
+                <div class="divider my-3"></div>
+
+                <div class="skillbar" data-skill="Java" data-level="85">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="mono">Java</span><span class="mono dim level">0%</span>
+                  </div>
+                  <div class="bar">
+                    <span class="fill"></span>
+                  </div>
+                </div>
+
+                <div class="skillbar mt-3" data-skill="Spring Boot" data-level="80">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="mono">Spring Boot</span><span class="mono dim level">0%</span>
+                  </div>
+                  <div class="bar">
+                    <span class="fill"></span>
+                  </div>
+                </div>
+
+                <div class="skillbar mt-3" data-skill="React JS" data-level="75">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="mono">React JS</span
+                    ><span class="mono dim level">0%</span>
+                  </div>
+                  <div class="bar">
+                    <span class="fill"></span>
+                  </div>
+                </div>
+
+                <div class="skillbar mt-3" data-skill="MySQL" data-level="80">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="mono">MySQL</span><span class="mono dim level">0%</span>
+                  </div>
+                  <div class="bar">
+                    <span class="fill"></span>
+                  </div>
+                </div>
+
+                <div class="skillbar mt-3" data-skill="REST APIs" data-level="85">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="mono">REST APIs</span
+                    ><span class="mono dim level">0%</span>
+                  </div>
+                  <div class="bar">
+                    <span class="fill"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section-pad section-alt">
+        <div class="container">
+          <div class="text-center">
+            <div class="section-kicker mono" data-aos="fade-up">Skills</div>
+            <h2 class="section-title mt-2" data-aos="fade-up" data-aos-delay="70">
+              A modern stack, built with taste.
+            </h2>
+            <p class="section-lead mt-3 mx-auto" style="max-width: 58ch" data-aos="fade-up" data-aos-delay="120">
+              Strong fundamentals with polished delivery. Hover the cards for micro-interactions.
+            </p>
+          </div>
+
+          <div class="row g-4 mt-2">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+              <div class="skill-card glass h-100">
+                <div class="skill-icon"><i class="bi bi-braces"></i></div>
+                <h3 class="h5 fw-700 mt-3">Java & Spring Boot</h3>
+                <p class="dim mb-0">
+                  Building robust backend services with RESTful APIs and MVC architecture.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="skill-card glass h-100">
+                <div class="skill-icon"><i class="bi bi-cup-hot"></i></div>
+                <h3 class="h5 fw-700 mt-3">React JS & Frontend</h3>
+                <p class="dim mb-0">
+                  Modern UI development with components, state management, and responsive design.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+              <div class="skill-card glass h-100">
+                <div class="skill-icon"><i class="bi bi-layers"></i></div>
+                <h3 class="h5 fw-700 mt-3">Full Stack Integration</h3>
+                <p class="dim mb-0">
+                  Seamless frontend-backend communication with CRUD operations and JWT auth.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="skill-card glass h-100">
+                <div class="skill-icon"><i class="bi bi-palette2"></i></div>
+                <h3 class="h5 fw-700 mt-3">MySQL & Database</h3>
+                <p class="dim mb-0">
+                  Efficient data storage, retrieval, and management with Hibernate/JPA.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+              <div class="skill-card glass h-100">
+                <div class="skill-icon"><i class="bi bi-speedometer2"></i></div>
+                <h3 class="h5 fw-700 mt-3">Tools & Testing</h3>
+                <p class="dim mb-0">
+                  Git, Postman, Maven, debugging, and API testing for quality assurance.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="skill-card glass h-100">
+                <div class="skill-icon"><i class="bi bi-bug"></i></div>
+                <h3 class="h5 fw-700 mt-3">Responsive Design</h3>
+                <p class="dim mb-0">
+                  Bootstrap-powered interfaces that work seamlessly across devices.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section-pad">
+        <div class="container">
+          <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3">
+            <div>
+              <div class="section-kicker mono" data-aos="fade-up">Projects</div>
+              <h2 class="section-title mt-2" data-aos="fade-up" data-aos-delay="70">
+                Selected work with real-world impact.
+              </h2>
+              <p class="section-lead mt-3" data-aos="fade-up" data-aos-delay="120">
+                Replace the demo items with your real projects (titles, links, images).
+              </p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="160">
+              <a class="btn btn-outline-neon" href="#contact">
+                <i class="bi bi-clipboard-check me-2"></i> Hire-ready? Let’s talk
+              </a>
+            </div>
+          </div>
+
+          <div class="row g-4 mt-2">
+            <!-- Project 1 -->
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="60">
+              <article class="project-card glass h-100">
+                <div class="project-media">
+                  <img
+                    src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=70"
+                    alt="Code editor preview"
+                    loading="lazy"
+                  />
+                  <div class="project-overlay" aria-hidden="true"></div>
+                </div>
+                <div class="project-body">
+                  <div class="d-flex justify-content-between align-items-start gap-2">
+                    <h3 class="h5 fw-700 mb-1">Task Management System</h3>
+                    <span class="badge badge-soft">Featured</span>
+                  </div>
+                  <p class="dim">
+                    Developed a full-stack task management application using React JS, Spring Boot, and MySQL with secure authentication and role-based access.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2 mb-3">
+                    <span class="badge badge-tech">React JS</span>
+                    <span class="badge badge-tech">Spring Boot</span>
+                    <span class="badge badge-tech">MySQL</span>
+                  </div>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <button type="button" class="btn btn-sm btn-outline-soft flex-fill project-detail-btn" data-project-key="taskManagement">
+                      <i class="bi bi-eye me-1"></i> Details
+                    </button>
+                    <a class="btn btn-sm btn-outline-neon flex-fill" href="https://github.com/sanjay4114/Task-management-system-react" target="_blank" rel="noreferrer">
+                      <i class="bi bi-github me-1"></i> GitHub
+                    </a>
+                    <a class="btn btn-sm btn-neon flex-fill" href="https://task-management-system-react-1.onrender.com" target="_blank" rel="noreferrer">
+                      <i class="bi bi-box-arrow-up-right me-1"></i> Live
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="120">
+              <article class="project-card glass h-100">
+                <div class="project-media">
+                  <img
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=70"
+                    alt="Analytics dashboard preview"
+                    loading="lazy"
+                  />
+                  <div class="project-overlay" aria-hidden="true"></div>
+                </div>
+                <div class="project-body">
+                  <h3 class="h5 fw-700 mb-1">Employee Management System</h3>
+                  <p class="dim">
+                    A full-stack employee management web application with CRUD operations, search functionality, and responsive UI using React and Spring Boot.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2 mb-3">
+                    <span class="badge badge-tech">React</span>
+                    <span class="badge badge-tech">Spring Boot</span>
+                    <span class="badge badge-tech">MySQL</span>
+                  </div>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <button type="button" class="btn btn-sm btn-outline-soft flex-fill project-detail-btn" data-project-key="employeeManagement">
+                      <i class="bi bi-eye me-1"></i> Details
+                    </button>
+                    <a class="btn btn-sm btn-outline-neon flex-fill" href="https://github.com/sanjay4114/Employee-Management-System" target="_blank" rel="noreferrer">
+                      <i class="bi bi-github me-1"></i> GitHub
+                    </a>
+                    <a class="btn btn-sm btn-neon flex-fill" href="#" target="_blank" rel="noreferrer">
+                      <i class="bi bi-box-arrow-up-right me-1"></i> Live
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="180">
+              <article class="project-card glass h-100">
+                <div class="project-media">
+                  <img
+                    src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1600&q=70"
+                    alt="Cybersecurity themed preview"
+                    loading="lazy"
+                  />
+                  <div class="project-overlay" aria-hidden="true"></div>
+                </div>
+                <div class="project-body">
+                  <h3 class="h5 fw-700 mb-1">Ongoing Projects</h3>
+                  <p class="dim">
+                    Currently working on advanced full-stack applications with microservices and cloud deployment.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2 mb-3">
+                    <span class="badge badge-tech">Java</span>
+                    <span class="badge badge-tech">Spring Boot</span>
+                    <span class="badge badge-tech">Docker</span>
+                  </div>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <button type="button" class="btn btn-sm btn-outline-soft flex-fill project-detail-btn" data-project-key="ongoingProjects">
+                      <i class="bi bi-eye me-1"></i> Details
+                    </button>
+                    <a class="btn btn-sm btn-outline-neon flex-fill" href="https://github.com/sanjay4114" target="_blank" rel="noreferrer">
+                      <i class="bi bi-github me-1"></i> GitHub
+                    </a>
+                    <a class="btn btn-sm btn-neon flex-fill" href="#" target="_blank" rel="noreferrer">
+                      <i class="bi bi-box-arrow-up-right me-1"></i> Coming Soon
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Detail Modal -->
+      <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content glass border-0 overflow-hidden">
+            <div class="modal-header border-0">
+              <div>
+                <p class="mono dim mb-1" id="projectModalCategory"></p>
+                <h5 class="modal-title fw-800" id="projectModalLabel">Project details</h5>
+              </div>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p class="dim mb-4" id="projectModalDescription"></p>
+              <div class="mb-4">
+                <div class="fw-700 mb-2">Highlights</div>
+                <ul class="project-feature-list" id="projectModalFeatures"></ul>
+              </div>
+              <div class="mb-4" id="projectModalTech"></div>
+              <div class="d-flex gap-2 flex-wrap" id="projectModalLinks"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Journey / Timeline -->
+      <section id="journey" class="section-pad section-alt">
+        <div class="container">
+          <div class="text-center">
+            <div class="section-kicker mono" data-aos="fade-up">Experience</div>
+            <h2 class="section-title mt-2" data-aos="fade-up" data-aos-delay="70">
+              Journey timeline
+            </h2>
+            <p class="section-lead mt-3 mx-auto" style="max-width: 62ch" data-aos="fade-up" data-aos-delay="120">
+              A clean, animated vertical timeline (edit the entries to match your real history).
+            </p>
+          </div>
+
+          <div class="timeline mt-4">
+            <div class="timeline-line" aria-hidden="true"></div>
+
+            <div class="timeline-item" data-aos="fade-right">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card glass">
+                <div class="mono dim">2026 • Present</div>
+                <div class="h5 fw-700 mb-2">Full Stack Java Developer Intern</div>
+                <p class="dim mb-0">
+                  Developing scalable web applications using Java, Spring Boot, and React JS at Vybog. Building RESTful APIs and responsive UIs.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-left">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card glass">
+                <div class="mono dim">2025</div>
+                <div class="h5 fw-700 mb-2">Projects & Certifications</div>
+                <p class="dim mb-0">
+                  Completed full-stack projects and earned certifications in Full Stack Java Development, Web Development, and Cloud Computing.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-right">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card glass">
+                <div class="mono dim">2021 • 2025</div>
+                <div class="h5 fw-700 mb-2">B.Tech Information Technology</div>
+                <p class="dim mb-0">
+                  DMI College of Engineering, Chennai. CGPA: 7.2/10. Foundation in programming, databases, and software development.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section-pad">
+        <div class="container">
+          <div class="row g-4 align-items-stretch">
+            <div class="col-lg-5">
+              <div class="section-kicker mono" data-aos="fade-up">Contact</div>
+              <h2 class="section-title mt-2" data-aos="fade-up" data-aos-delay="70">
+                Let’s build something exceptional.
+              </h2>
+              <p class="section-lead mt-3" data-aos="fade-up" data-aos-delay="120">
+                Send a message and I’ll respond quickly. This form includes validation and a premium glass UI.
+              </p>
+
+              <div class="glass p-4 mt-4" data-aos="fade-up" data-aos-delay="160">
+                <div class="d-flex gap-3 flex-wrap">
+                  <a class="contact-chip" href="https://www.linkedin.com/in/sanjay-kalaivani-432ab1279" target="_blank" rel="noreferrer">
+                    <i class="bi bi-linkedin me-2"></i> LinkedIn
+                  </a>
+                  <a class="contact-chip" href="https://github.com/sanjay4114" target="_blank" rel="noreferrer">
+                    <i class="bi bi-github me-2"></i> GitHub
+                  </a>
+                  <a class="contact-chip" href="mailto:sanjaykalaivani30@gmail.com">
+                    <i class="bi bi-envelope me-2"></i> sanjaykalaivani30@gmail.com
+                  </a>
+                </div>
+                <div class="divider my-3"></div>
+                <div class="mono dim">
+                  Tip: update your real links in the HTML for maximum recruiter impact.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="glass p-4 p-lg-5 h-100" data-aos="fade-left" data-aos-duration="900">
+                <form id="contactForm" class="needs-validation" novalidate>
+                  <div class="row g-3">
+                    <div class="col-md-6 form-floating">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                        minlength="2"
+                      />
+                      <label for="name">Name</label>
+                      <div class="invalid-feedback">Please enter your name.</div>
+                    </div>
+
+                    <div class="col-md-6 form-floating">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="name@example.com"
+                        required
+                      />
+                      <label for="email">Email</label>
+                      <div class="invalid-feedback">Please enter a valid email.</div>
+                    </div>
+
+                    <div class="col-12 form-floating">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="subject"
+                        name="subject"
+                        placeholder="Subject"
+                        required
+                        minlength="3"
+                      />
+                      <label for="subject">Subject</label>
+                      <div class="invalid-feedback">Please add a short subject.</div>
+                    </div>
+
+                    <div class="col-12 form-floating">
+                      <textarea
+                        class="form-control"
+                        placeholder="Message"
+                        id="message"
+                        name="message"
+                        style="height: 140px"
+                        required
+                        minlength="10"
+                      ></textarea>
+                      <label for="message">Message</label>
+                      <div class="invalid-feedback">
+                        Please write a message (min 10 characters).
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mt-4">
+                    <button class="btn btn-neon btn-lg" type="submit">
+                      <i class="bi bi-send me-2"></i> Send Message
+                    </button>
+                    <div class="mono dim">
+                      Or email: <a class="link-neon" href="mailto:sanjaykalaivani30@gmail.com">sanjaykalaivani30@gmail.com</a>
+                    </div>
+                  </div>
+
+                  <div id="formToast" class="form-toast mt-3" role="status" aria-live="polite"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-accent" aria-hidden="true"></div>
+      <div class="container py-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+          <div class="mono dim">
+            © <span id="year"></span> Sanjay. Crafted with glass + neon.
+          </div>
+          <div class="d-flex gap-3">
+            <a class="footer-link" href="#top">Top</a>
+            <a class="footer-link" href="#projects">Projects</a>
+            <a class="footer-link" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <!-- Particles.js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
+      defer
+    ></script>
+
+    <!-- AOS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"
+      defer
+    ></script>
+
+    <!-- GSAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+      defer
+    ></script>
+
+    <script src="./js/main.js" defer></script>
+  </body>
+</html>
