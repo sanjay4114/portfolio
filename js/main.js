@@ -506,27 +506,21 @@
       }
 
       const formData = new FormData(form);
-      const data = {
-        access_key: "YOUR_ACCESS_KEY_HERE", // Get your free key from https://web3forms.com/
-        name: formData.get('name'),
-        email: formData.get('email'),
-        subject: formData.get('subject'),
-        message: formData.get('message')
-      };
-
+      
+      // IMPORTANT: Get your free access key from https://web3forms.com/
+      // and replace the string below. It will send emails directly to the address you register with.
+      formData.append("access_key", "4e5c00b2-c1df-4412-a36d-39b1d6a3b4a9");
+      
+      // We don't need to convert to JSON for Web3Forms, it accepts FormData directly.
       try {
         const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify(data),
+          body: formData
         });
 
         const result = await response.json();
 
-        if (response.status === 200) {
+        if (response.ok) {
           showToast("Message sent successfully!", "success");
           form.reset();
           form.classList.remove("was-validated");
