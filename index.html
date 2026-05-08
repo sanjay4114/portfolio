@@ -78,11 +78,11 @@
       <a class="social-btn" href="https://www.linkedin.com/in/sanjay-kalaivani-432ab1279" target="_blank" rel="noreferrer" aria-label="LinkedIn">
         <i class="bi bi-linkedin"></i>
       </a>
-      <a class="social-btn" href="#" target="_blank" rel="noreferrer" aria-label="Twitter/X">
-        <i class="bi bi-twitter-x"></i>
+      <a class="social-btn d-flex align-items-center justify-content-center" href="https://leetcode.com/sanjay4114" target="_blank" rel="noreferrer" aria-label="LeetCode" style="padding: 10px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M13.483 0a1.374 1.374 0 0 0-.961.414l-9.777 9.778a1.38 1.38 0 0 0 0 1.95l1.95 1.95a1.38 1.38 0 0 0 1.951 0l7.827-7.828a.46.46 0 0 1 .65 0l3.25 3.25a.46.46 0 0 1 0 .65l-7.828 7.827a1.38 1.38 0 0 0 0 1.951l1.95 1.95a1.38 1.38 0 0 0 1.951 0l9.777-9.778a1.374 1.374 0 0 0-.001-1.95l-7.827-7.828a1.374 1.374 0 0 0-.962-.415zM4.326 12.4a1.38 1.38 0 0 0-1.951 0l-1.95 1.95a1.38 1.38 0 0 0 0 1.951l9.777 9.778a1.374 1.374 0 0 0 1.95 0l1.951-1.95a1.38 1.38 0 0 0 0-1.951L4.326 12.4z"/></svg>
       </a>
-      <a class="social-btn" href="#contact" aria-label="Contact">
-        <i class="bi bi-envelope"></i>
+      <a class="social-btn d-flex align-items-center justify-content-center" href="https://www.hackerrank.com/sanjay4114" target="_blank" rel="noreferrer" aria-label="HackerRank" style="padding: 10px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0a12 12 0 1 0 12 12A12.015 12.015 0 0 0 12 0zm5.2 16.4h-2.4v-4.4a.8.8 0 0 0-.8-.8H10a.8.8 0 0 0-.8.8v4.4H6.8V7.6h2.4v4.4a.8.8 0 0 0 .8.8h4a.8.8 0 0 0 .8-.8V7.6h2.4z"/></svg>
       </a>
     </aside>
 
@@ -172,9 +172,7 @@
               data-aos-delay="120"
               data-aos-duration="900"
             >
-              Full Stack Java Developer crafting scalable web applications with
-              <span class="text-neon">modern technologies</span> and
-              <span class="text-gradient">clean architecture</span>.
+              Java Full Stack Developer building <span class="text-neon">scalable web applications</span> with <span class="text-gradient">React & Spring Boot</span>.
             </h1>
 
             <p
@@ -238,45 +236,28 @@
 
           <div class="col-lg-5">
             <div
-              class="glass hero-card"
+              class="glass hero-card terminal-card"
               data-aos="zoom-in"
               data-aos-delay="180"
               data-aos-duration="1000"
             >
-              <div class="hero-card-top">
-                <div class="status-dot me-2" aria-hidden="true"></div>
-                <span class="mono">Available for opportunities</span>
+              <div class="terminal-header d-flex align-items-center justify-content-between p-2 border-bottom border-secondary-subtle">
+                <div class="d-flex gap-2">
+                  <span class="status-dot bg-danger" style="width: 10px; height: 10px; border-radius: 50%; box-shadow: none;"></span>
+                  <span class="status-dot bg-warning" style="width: 10px; height: 10px; border-radius: 50%; box-shadow: none;"></span>
+                  <span class="status-dot bg-success" style="width: 10px; height: 10px; border-radius: 50%; box-shadow: none;"></span>
+                </div>
+                <span class="mono small dim">sanjay@terminal: ~</span>
+                <i class="bi bi-terminal small dim"></i>
               </div>
-              <div class="hero-card-body mt-3">
-                <div class="id-row">
-                  <div class="avatar-glow" aria-hidden="true">
-                    <div class="avatar-core">
-                      <i class="bi bi-code-slash"></i>
-                    </div>
-                  </div>
-                  <div class="ms-3">
-                    <div class="h5 mb-1 fw-700">Sanjay M</div>
-                    <div class="mono dim">Full Stack Java Developer</div>
-                  </div>
+              <div class="terminal-body p-3 mono text-start" style="height: 240px; overflow-y: auto; font-size: 0.85rem; line-height: 1.4;">
+                <div class="terminal-output" id="terminalOutput">
+                  <p class="text-neon mb-1">> Welcome to Sanjay's Terminal v1.0!</p>
+                  <p class="dim small mb-2">Type "help" to see available commands.</p>
                 </div>
-
-                <div class="divider my-3"></div>
-
-                <div class="d-grid gap-2">
-                  <a class="btn btn-outline-neon" href="#projects">
-                    <i class="bi bi-briefcase me-2"></i> See Case Studies
-                  </a>
-                  <a class="btn btn-outline-soft" href="#contact">
-                    <i class="bi bi-send me-2"></i> Let’s Talk
-                  </a>
-                </div>
-
-                <div class="mini-tech mt-3">
-                  <span class="chip">Java</span>
-                  <span class="chip">Spring Boot</span>
-                  <span class="chip">React JS</span>
-                  <span class="chip">MySQL</span>
-                  <span class="chip">REST APIs</span>
+                <div class="terminal-input-line d-flex align-items-center">
+                  <span class="prompt text-neon me-2">sanjay:~$</span>
+                  <input type="text" id="terminalInput" class="terminal-input mono border-0 bg-transparent text-white flex-grow-1" style="outline: none;" autofocus autocomplete="off" />
                 </div>
               </div>
             </div>
@@ -321,23 +302,41 @@
                 </div>
               </div>
 
-              <div class="row row-cols-1 row-cols-sm-3 g-3 mt-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="row row-cols-2 g-3 mt-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="col">
-                  <div class="stat-card glass text-center py-3">
-                    <div class="stat-value text-neon h3 fw-800 mb-1" data-count="3">0</div>
-                    <div class="stat-label mono dim small">Projects Completed</div>
+                  <div class="glass p-3 h-100 d-flex align-items-center gap-2">
+                    <i class="bi bi-layers text-neon h5 mb-0"></i>
+                    <span class="small fw-600">Full Stack Dev</span>
                   </div>
                 </div>
                 <div class="col">
-                  <div class="stat-card glass text-center py-3">
-                    <div class="stat-value text-neon h3 fw-800 mb-1" data-count="12">0</div>
-                    <div class="stat-label mono dim small">Technologies Known</div>
+                  <div class="glass p-3 h-100 d-flex align-items-center gap-2">
+                    <i class="bi bi-braces text-neon h5 mb-0"></i>
+                    <span class="small fw-600">REST API Integration</span>
                   </div>
                 </div>
                 <div class="col">
-                  <div class="stat-card glass text-center py-3">
-                    <div class="stat-value text-neon h3 fw-800 mb-1" data-count="1">0</div>
-                    <div class="stat-label mono dim small">Internship Exp.</div>
+                  <div class="glass p-3 h-100 d-flex align-items-center gap-2">
+                    <i class="bi bi-laptop text-neon h5 mb-0"></i>
+                    <span class="small fw-600">Responsive UI Design</span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="glass p-3 h-100 d-flex align-items-center gap-2">
+                    <i class="bi bi-rocket-takeoff text-neon h5 mb-0"></i>
+                    <span class="small fw-600">React & Spring Boot</span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="glass p-3 h-100 d-flex align-items-center gap-2">
+                    <i class="bi bi-database text-neon h5 mb-0"></i>
+                    <span class="small fw-600">Database Management</span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="glass p-3 h-100 d-flex align-items-center gap-2">
+                    <i class="bi bi-lightbulb text-neon h5 mb-0"></i>
+                    <span class="small fw-600">Problem Solving</span>
                   </div>
                 </div>
               </div>

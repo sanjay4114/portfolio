@@ -560,6 +560,50 @@
     window.addEventListener("load", () => window.setTimeout(hide, 450), { once: true });
   }
 
+  function initTerminal() {
+    const input = $("#terminalInput");
+    const output = $("#terminalOutput");
+    if (!input || !output) return;
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        const cmd = input.value.trim().toLowerCase();
+        input.value = "";
+        
+        const line = document.createElement("p");
+        line.className = "mb-1";
+        line.innerHTML = `<span class="prompt text-neon">sanjay:~$</span> ${cmd}`;
+        output.appendChild(line);
+
+        const response = document.createElement("p");
+        response.className = "dim small mb-2";
+
+        switch(cmd) {
+          case "help":
+            response.innerHTML = "Available commands:<br>- <span class='text-neon'>skills</span>: View tech stack<br>- <span class='text-neon'>about</span>: Brief bio<br>- <span class='text-neon'>projects</span>: View main projects<br>- <span class='text-neon'>clear</span>: Clear terminal";
+            break;
+          case "skills":
+            response.innerHTML = "Backend: Java, Spring Boot, REST APIs<br>Frontend: HTML, CSS, JS, React JS<br>Database: MySQL, Spring Data JPA<br>Tools: Git, Docker, Postman";
+            break;
+          case "about":
+            response.innerHTML = "Full Stack Java Developer Intern @ Vybog, Chennai. Building scalable backend REST APIs and responsive React applications.";
+            break;
+          case "projects":
+            response.innerHTML = "1. Task Management System<br>2. Employee Management System<br>Scroll to Projects section...";
+            window.location.hash = "#projects";
+            break;
+          case "clear":
+            output.innerHTML = "";
+            return;
+          default:
+            response.innerHTML = `Command not found: "${cmd}". Type "help" for a list of commands.`;
+        }
+        output.appendChild(response);
+        output.parentElement.scrollTop = output.parentElement.scrollHeight;
+      }
+    });
+  }
+
   function init() {
     initTheme();
     initLoader();
@@ -577,6 +621,7 @@
     initProjectModal();
     initCursor();
     initForm();
+    initTerminal();
   }
 
   document.addEventListener("DOMContentLoaded", init, { once: true });
