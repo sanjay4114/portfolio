@@ -1,0 +1,17 @@
+# Backend build artifacts
+backend/target/
+backend/*.jar
+backend/**/*.class
+
+# Eclipse files
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/.factorypath
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node files (if ever used)
+node_modules/
