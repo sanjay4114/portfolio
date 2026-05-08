@@ -507,6 +507,7 @@
 
       const formData = new FormData(form);
       const data = {
+        access_key: "YOUR_ACCESS_KEY_HERE", // Get your free key from https://web3forms.com/
         name: formData.get('name'),
         email: formData.get('email'),
         subject: formData.get('subject'),
@@ -514,22 +515,23 @@
       };
 
       try {
-        const response = await fetch('https://portfolio-59f4.onrender.com/api/contact', {
+        const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            'Accept': 'application/json'
           },
           body: JSON.stringify(data),
         });
 
         const result = await response.json();
 
-        if (response.ok) {
-          showToast(result.message || "Message sent successfully!", "success");
+        if (response.status === 200) {
+          showToast("Message sent successfully!", "success");
           form.reset();
           form.classList.remove("was-validated");
         } else {
-          showToast(result.error || "Failed to send message. Please try again.", "error");
+          showToast(result.message || "Failed to send message. Please try again.", "error");
         }
       } catch (error) {
         console.error('Error sending message:', error);
