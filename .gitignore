@@ -13,5 +13,8 @@ backend/.factorypath
 .DS_Store
 Thumbs.db
 
-# Node files (if ever used)
+# Docker build files
+backend/.dockerignore
+
+# Node files
 node_modules/
