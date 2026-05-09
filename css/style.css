@@ -468,7 +468,7 @@ a {
 /* Hero */
 .hero-section {
   min-height: 100dvh;
-  padding-top: 135px;
+  padding-top: 88px;
   padding-bottom: 64px;
   display: grid;
   place-items: center;
@@ -505,7 +505,7 @@ a {
   z-index: 1;
   padding-left: var(--container-pad);
   padding-right: var(--container-pad);
-  padding-top: clamp(60px, 10vw, 125px) !important;
+  padding-top: clamp(25px, 4vw, 50px) !important;
 }
 
 .pill {
