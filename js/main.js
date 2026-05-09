@@ -565,8 +565,17 @@
     const output = $("#terminalOutput");
     if (!input || !output) return;
 
+    // Focus input when clicking anywhere inside the terminal card
+    const card = document.querySelector(".terminal-card");
+    if (card) {
+      card.addEventListener("click", () => {
+        input.focus();
+      });
+    }
+
     input.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
+        e.preventDefault(); // Prevents default form submissions or action events
         const cmd = input.value.trim().toLowerCase();
         input.value = "";
         
