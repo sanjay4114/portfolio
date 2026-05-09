@@ -324,6 +324,7 @@ a {
 .navbar .nav-link {
   position: relative;
   transition: color 180ms ease;
+  color: var(--muted) !important;
 }
 
 .navbar .nav-link::after {
@@ -338,8 +339,8 @@ a {
   transition: width 220ms ease, left 220ms ease;
 }
 
-.navbar .nav-link:hover {
-  color: var(--text);
+.navbar .nav-link:hover, .navbar .nav-link.active {
+  color: var(--text) !important;
 }
 
 .navbar .nav-link:hover::after {
@@ -350,6 +351,7 @@ a {
 .navbar .brand-text {
   font-weight: 800;
   letter-spacing: -0.04em;
+  color: var(--text) !important;
 }
 
 .brand-mark {
