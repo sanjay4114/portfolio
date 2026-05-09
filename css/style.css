@@ -1166,29 +1166,48 @@ html[data-theme="light"] .form-select {
 /* Navbar - Premium Desktop Floating Capsule */
 @media (min-width: 992px) {
   .nav-glass {
-    width: 92%;
-    max-width: 1200px;
+    width: 96%;
+    max-width: 1440px;
     margin: 1.5rem auto 0 auto;
     left: 50% !important;
     right: auto !important;
     transform: translateX(-50%) !important;
     border-radius: 50px;
-    border: 1px solid var(--stroke) !important;
-    background: rgba(10, 14, 28, 0.7) !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
-    padding: 0.6rem 1.5rem !important;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(0, 229, 255, 0.28) !important;
+    background: rgba(10, 14, 28, 0.72) !important;
+    backdrop-filter: blur(24px) !important;
+    -webkit-backdrop-filter: blur(24px) !important;
+    padding: 0.6rem 2rem !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.55), 
+                0 0 24px rgba(0, 229, 255, 0.18), 
+                0 0 45px rgba(124, 92, 255, 0.12) !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
   
   .nav-glass.nav-scrolled {
-    width: 85% !important;
+    width: 92% !important;
     margin-top: 1rem !important;
-    background: rgba(8, 11, 22, 0.88) !important;
-    border-color: rgba(0, 229, 255, 0.35) !important;
-    box-shadow: 0 0 30px rgba(0, 229, 255, 0.15) !important;
+    background: rgba(8, 11, 22, 0.9) !important;
+    border-color: rgba(0, 229, 255, 0.45) !important;
+    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.6), 
+                0 0 30px rgba(0, 229, 255, 0.25), 
+                0 0 55px rgba(124, 92, 255, 0.2) !important;
   }
+}
+
+.nav-social-link {
+  color: var(--text-dim) !important;
+  transition: color 0.25s ease, transform 0.25s ease, filter 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.nav-social-link:hover {
+  color: var(--neon) !important;
+  transform: translateY(-2px);
+  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.6));
 }
 
 /* Mobile Bottom Navigation (Option B) */
