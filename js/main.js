@@ -662,24 +662,28 @@
   }
 
   function init() {
-    initTheme();
-    initLoader();
-    initNavbar();
-    initBackToTop();
-    initThemeToggle();
-    initFooterYear();
-    initAOS();
-    initParticles();
-    initTyping();
-    initSkillBars();
-    initGSAP();
-    initInteractiveCards();
-    initHeroCounters();
-    initProjectModal();
-    initCursor();
-    initForm();
-    initTerminal();
-    initScrollSpy();
+    const safeCall = (fn) => {
+      try { fn(); } catch (e) { console.warn("Init error:", e); }
+    };
+    
+    safeCall(initTheme);
+    safeCall(initThemeToggle);
+    safeCall(initLoader);
+    safeCall(initNavbar);
+    safeCall(initBackToTop);
+    safeCall(initFooterYear);
+    safeCall(initAOS);
+    safeCall(initParticles);
+    safeCall(initTyping);
+    safeCall(initSkillBars);
+    safeCall(initGSAP);
+    safeCall(initInteractiveCards);
+    safeCall(initHeroCounters);
+    safeCall(initProjectModal);
+    safeCall(initCursor);
+    safeCall(initForm);
+    safeCall(initTerminal);
+    safeCall(initScrollSpy);
   }
 
   document.addEventListener("DOMContentLoaded", init, { once: true });
