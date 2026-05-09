@@ -64,12 +64,19 @@
     const nav = $("#mainNav");
     if (!nav) return;
 
+    let ticking = false;
     const onScroll = () => {
-      const scrolled = window.scrollY > 16;
-      nav.classList.toggle("nav-scrolled", scrolled);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrolled = window.scrollY > 16;
+          nav.classList.toggle("nav-scrolled", scrolled);
 
-      const back = $("#backToTop");
-      if (back) back.classList.toggle("is-visible", window.scrollY > 520);
+          const back = $("#backToTop");
+          if (back) back.classList.toggle("is-visible", window.scrollY > 520);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     onScroll();
@@ -271,12 +278,19 @@
     // Scroll parallax for section backgrounds/cards (lightweight)
     const parallaxEls = [".hero-gradient", ".floating-socials"].map((s) => $(s)).filter(Boolean);
     if (parallaxEls.length) {
+      let ticking = false;
       const onScroll = () => {
-        const y = window.scrollY || 0;
-        parallaxEls.forEach((el, i) => {
-          const f = i === 0 ? 0.08 : 0.05;
-          el.style.transform = `translate3d(0, ${y * f}px, 0)`;
-        });
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const y = window.scrollY || 0;
+            parallaxEls.forEach((el, i) => {
+              const f = i === 0 ? 0.08 : 0.05;
+              el.style.transform = `translate3d(0, ${y * f}px, 0)`;
+            });
+            ticking = false;
+          });
+          ticking = true;
+        }
       };
       onScroll();
       window.addEventListener("scroll", onScroll, { passive: true });
