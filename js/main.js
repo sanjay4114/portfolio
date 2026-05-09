@@ -627,6 +627,33 @@
     });
   }
 
+  function initScrollSpy() {
+    const sections = $$("section[id], header[id]");
+    const navLinks = $$(".nav-link, .mobile-nav-link");
+    if (!sections.length || !navLinks.length) return;
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "-30% 0px -30% 0px",
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute("id");
+          navLinks.forEach((link) => {
+            const href = link.getAttribute("href");
+            const isActive = href === `#${id}` || (href === "#top" && id === "top");
+            link.classList.toggle("active", isActive);
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach((section) => observer.observe(section));
+  }
+
   function init() {
     initTheme();
     initLoader();
@@ -645,6 +672,7 @@
     initCursor();
     initForm();
     initTerminal();
+    initScrollSpy();
   }
 
   document.addEventListener("DOMContentLoaded", init, { once: true });
