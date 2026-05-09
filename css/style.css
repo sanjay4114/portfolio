@@ -49,6 +49,7 @@ html[data-theme="light"] {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -1214,8 +1215,10 @@ html[data-theme="light"] .form-select {
 .mobile-bottom-nav {
   position: fixed;
   bottom: 1.5rem;
-  left: 5%;
-  right: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 480px;
   height: 70px;
   background: rgba(10, 14, 28, 0.85);
   backdrop-filter: blur(20px);
