@@ -35,11 +35,17 @@
       // ignore
     }
 
-    const toggle = $("#themeToggle");
-    if (toggle) {
+    const toggles = $$(".theme-toggle-btn");
+    toggles.forEach((toggle) => {
       const icon = toggle.querySelector("i");
-      if (icon) icon.className = safe === "light" ? "bi bi-sun-fill me-1" : "bi bi-moon-stars-fill me-1";
-    }
+      if (icon) {
+        if (toggle.classList.contains("btn-floating-theme")) {
+          icon.className = safe === "light" ? "bi bi-sun-fill" : "bi bi-moon-stars-fill";
+        } else {
+          icon.className = safe === "light" ? "bi bi-sun-fill me-1" : "bi bi-moon-stars-fill me-1";
+        }
+      }
+    });
   }
 
   function initTheme() {
@@ -554,9 +560,10 @@
   }
 
   function initThemeToggle() {
-    const toggle = $("#themeToggle");
-    if (!toggle) return;
-    toggle.addEventListener("click", () => setTheme(state.theme === "dark" ? "light" : "dark"));
+    const toggles = $$(".theme-toggle-btn");
+    toggles.forEach((toggle) => {
+      toggle.addEventListener("click", () => setTheme(state.theme === "dark" ? "light" : "dark"));
+    });
   }
 
   function initFooterYear() {

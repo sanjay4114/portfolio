@@ -1252,3 +1252,33 @@ html[data-theme="light"] .form-select {
   color: var(--neon);
   transform: translateY(-2px);
 }
+
+/* Mobile Floating Theme Toggle Button */
+.btn-floating-theme {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 229, 255, 0.25) !important;
+  background: rgba(10, 14, 28, 0.72) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: var(--neon2) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 229, 255, 0.15);
+  z-index: 1050;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-floating-theme i {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-floating-theme:active {
+  transform: scale(0.92);
+}
