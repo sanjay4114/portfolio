@@ -1290,3 +1290,49 @@ html[data-theme="light"] .form-select {
 .btn-floating-theme:active {
   transform: scale(0.92);
 }
+
+/* Light Theme High-Contrast Overrides */
+html[data-theme="light"] .brand-text {
+  color: #070a12 !important;
+}
+
+html[data-theme="light"] .navbar .nav-link {
+  color: rgba(7, 10, 18, 0.72) !important;
+}
+
+html[data-theme="light"] .navbar .nav-link:hover,
+html[data-theme="light"] .navbar .nav-link.active {
+  color: #7c5cff !important;
+}
+
+html[data-theme="light"] .nav-social-link {
+  color: rgba(7, 10, 18, 0.75) !important;
+}
+
+html[data-theme="light"] .nav-social-link:hover {
+  color: #7c5cff !important;
+  filter: drop-shadow(0 0 8px rgba(124, 92, 255, 0.45));
+}
+
+html[data-theme="light"] .mobile-nav-link {
+  color: rgba(7, 10, 18, 0.72) !important;
+}
+
+html[data-theme="light"] .mobile-nav-link i {
+  color: rgba(7, 10, 18, 0.72);
+}
+
+html[data-theme="light"] .mobile-nav-link:hover,
+html[data-theme="light"] .mobile-nav-link.active {
+  color: #7c5cff !important;
+}
+
+html[data-theme="light"] .mobile-nav-link:hover i,
+html[data-theme="light"] .mobile-nav-link.active i {
+  color: #7c5cff !important;
+}
+
+html[data-theme="light"] .btn-floating-theme {
+  color: #7c5cff !important;
+  box-shadow: 0 8px 32px rgba(124, 92, 255, 0.15);
+}
