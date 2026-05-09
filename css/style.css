@@ -25,6 +25,9 @@
   --radius2: 26px;
 
   --container-pad: clamp(1.2rem, 3vw, 2.25rem);
+  
+  --nav-bg: rgba(10, 14, 28, 0.72);
+  --nav-border: rgba(0, 229, 255, 0.28);
 }
 
 html[data-theme="light"] {
@@ -39,6 +42,9 @@ html[data-theme="light"] {
   --muted2: rgba(0, 0, 0, 0.52);
   --shadow: 0 18px 50px rgba(20, 20, 50, 0.15);
   --shadow2: 0 30px 80px rgba(20, 20, 50, 0.22);
+  
+  --nav-bg: rgba(238, 241, 255, 0.8);
+  --nav-border: rgba(124, 92, 255, 0.35);
 }
 
 *,
@@ -1174,8 +1180,8 @@ html[data-theme="light"] .form-select {
     right: auto !important;
     transform: translateX(-50%) !important;
     border-radius: 50px;
-    border: 1px solid rgba(0, 229, 255, 0.28) !important;
-    background: rgba(10, 14, 28, 0.72) !important;
+    border: 1px solid var(--nav-border) !important;
+    background: var(--nav-bg) !important;
     backdrop-filter: blur(24px) !important;
     -webkit-backdrop-filter: blur(24px) !important;
     padding: 0.6rem 2rem !important;
@@ -1188,8 +1194,8 @@ html[data-theme="light"] .form-select {
   .nav-glass.nav-scrolled {
     width: 92% !important;
     margin-top: 1rem !important;
-    background: rgba(8, 11, 22, 0.9) !important;
-    border-color: rgba(0, 229, 255, 0.45) !important;
+    background: var(--nav-bg) !important;
+    border-color: var(--nav-border) !important;
     box-shadow: 0 12px 45px rgba(0, 0, 0, 0.6), 
                 0 0 30px rgba(0, 229, 255, 0.25), 
                 0 0 55px rgba(124, 92, 255, 0.2) !important;
@@ -1220,11 +1226,11 @@ html[data-theme="light"] .form-select {
   width: 90%;
   max-width: 480px;
   height: 70px;
-  background: rgba(10, 14, 28, 0.85);
+  background: var(--nav-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 35px;
-  border: 1px solid var(--stroke);
+  border: 1px solid var(--nav-border);
   box-shadow: 0 12px 42px rgba(0, 0, 0, 0.6), 0 0 12px rgba(0, 229, 255, 0.05);
   z-index: 1000;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1261,8 +1267,8 @@ html[data-theme="light"] .form-select {
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 229, 255, 0.25) !important;
-  background: rgba(10, 14, 28, 0.72) !important;
+  border: 1px solid var(--nav-border) !important;
+  background: var(--nav-bg) !important;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   color: var(--neon2) !important;
