@@ -300,6 +300,20 @@ a {
   backdrop-filter: blur(14px);
 }
 
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: rgba(10, 14, 28, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-top: 0.75rem;
+    border: 1px solid var(--stroke);
+    box-shadow: var(--shadow2);
+    transition: all 0.3s ease;
+  }
+}
+
 .navbar .nav-link {
   position: relative;
   transition: color 180ms ease;
