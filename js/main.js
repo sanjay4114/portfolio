@@ -448,19 +448,19 @@
           { label: "GitHub", url: "https://github.com/sanjay4114/Employee-Management-System", style: "outline-neon" },
         ],
       },
-      ongoingProjects: {
-        category: "Work in Progress",
-        title: "Ongoing Full Stack Projects",
-        description: "Building advanced web applications with Spring Boot, React, and cloud deployment patterns for production readiness.",
+      aiLeadGen: {
+        category: "AI & Automation",
+        title: "AI Powered Lead Generation System",
+        description: "A full-stack AI-powered lead generation platform using React JS, Spring Boot, and Python. Features AI-driven workflows for lead extraction, enrichment, and real-time management.",
         features: [
-          "Microservices-ready architecture",
-          "Accessible and responsive design",
-          "API-first integration strategy",
-          "Deployment-ready CI/CD workflows",
+          "Built AI-driven workflows for lead extraction and validation",
+          "Integrated RESTful APIs for real-time lead management",
+          "Designed responsive dashboards for exporting lead data",
+          "Implemented scalable backend processing for large datasets",
         ],
-        tech: ["Java", "Spring Boot", "Docker", "React", "Cloud"],
+        tech: ["React JS", "Spring Boot", "Python", "REST APIs"],
         links: [
-          { label: "GitHub", url: "https://github.com/sanjay4114", style: "outline-neon" },
+          { label: "GitHub", url: "https://github.com/sanjay4114/AI-Powered-Lead-Generation-System", style: "outline-neon" },
         ],
       },
     };
@@ -619,7 +619,7 @@
             response.innerHTML = "Full Stack Java Developer Intern @ Vybog, Chennai. Building scalable backend REST APIs and responsive React applications.";
             break;
           case "projects":
-            response.innerHTML = "1. Task Management System<br>2. Employee Management System<br>Scroll to Projects section...";
+            response.innerHTML = "1. AI Lead Generation System<br>2. Task Management System<br>3. Employee Management System<br>Scroll to Projects section...";
             window.location.hash = "#projects";
             break;
           case "clear":
