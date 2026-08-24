@@ -417,50 +417,49 @@
     const links = $("#projectModalLinks");
 
     const projectData = {
-      taskManagement: {
+      relay: {
         category: "Featured Project",
-        title: "Task Management System",
-        description: "A full-stack task management platform built with React JS, Spring Boot, and MySQL, including secure authentication and responsive UI.",
+        title: "Relay – Team Collaboration Platform",
+        description: "A Slack/Discord-style team collaboration platform with multi-workspace, channel-based architecture, and REST APIs.",
         features: [
-          "Secure authentication with role-based access",
-          "Full CRUD workflow for tasks",
-          "Responsive dashboard UI using Bootstrap",
-          "Deployed live for real-user testing",
+          "JWT authentication with refresh tokens and role-based access control (RBAC)",
+          "Real-time messaging with STOMP over WebSockets (SockJS)",
+          "Relational data models with Hibernate/JPA and Flyway migrations",
+          "File sharing with MinIO and a Kanban-style task management module (Zustand, TanStack Query)",
+          "Containerized with Docker and Nginx; automated builds via GitHub Actions CI/CD"
         ],
-        tech: ["React JS", "Spring Boot", "MySQL", "JWT", "Bootstrap"],
+        tech: ["Java 21", "Spring Boot 3", "React", "TypeScript", "MySQL", "WebSockets", "Docker"],
         links: [
-          { label: "GitHub", url: "https://github.com/sanjay4114/Task-management-system-react", style: "outline-neon" },
-          { label: "Live App", url: "https://task-management-system-react-1.onrender.com", style: "neon" },
-        ],
-      },
-      employeeManagement: {
-        category: "Full Stack App",
-        title: "Employee Management System",
-        description: "A React and Spring Boot application for managing employee records with search, edit, and delete functionality backed by MySQL.",
-        features: [
-          "Employee CRUD operations",
-          "Search and filter functionality",
-          "Secure REST API integration",
-          "Responsive UI for mobile and desktop",
-        ],
-        tech: ["React", "Spring Boot", "MySQL", "REST APIs", "Bootstrap"],
-        links: [
-          { label: "GitHub", url: "https://github.com/sanjay4114/Employee-Management-System", style: "outline-neon" },
+          { label: "GitHub", url: "https://github.com/sanjay4114/Relay", style: "outline-neon" },
         ],
       },
       aiLeadGen: {
         category: "AI & Automation",
-        title: "AI Powered Lead Generation System",
-        description: "A full-stack AI-powered lead generation platform using React JS, Spring Boot, and Python. Features AI-driven workflows for lead extraction, enrichment, and real-time management.",
+        title: "AI-Powered Lead Generation System",
+        description: "A full-stack lead generation platform with AI-driven extraction, enrichment, and validation workflows.",
         features: [
-          "Built AI-driven workflows for lead extraction and validation",
-          "Integrated RESTful APIs for real-time lead management",
-          "Designed responsive dashboards for exporting lead data",
-          "Implemented scalable backend processing for large datasets",
+          "AI-driven extraction, enrichment, and validation workflows",
+          "RESTful APIs for real-time lead management",
+          "Responsive dashboard for exporting lead data"
         ],
-        tech: ["React JS", "Spring Boot", "Python", "REST APIs"],
+        tech: ["React JS", "Spring Boot", "Python"],
         links: [
           { label: "GitHub", url: "https://github.com/sanjay4114/AI-Powered-Lead-Generation-System", style: "outline-neon" },
+        ],
+      },
+      taskManagement: {
+        category: "Full Stack App",
+        title: "Task Management System",
+        description: "A full-stack task manager with JWT authentication, role-based access control, and RESTful CRUD APIs.",
+        features: [
+          "Secure JWT authentication and role-based access control",
+          "Full RESTful CRUD APIs for task management",
+          "Responsive Bootstrap-based UI for desktop and mobile users"
+        ],
+        tech: ["React JS", "Spring Boot", "MySQL"],
+        links: [
+          { label: "GitHub", url: "https://github.com/sanjay4114/Task-management-system-react", style: "outline-neon" },
+          { label: "Live App", url: "https://task-management-system-react-1.onrender.com", style: "neon" },
         ],
       },
     };
@@ -619,7 +618,7 @@
             response.innerHTML = "Full Stack Java Developer Intern @ Vybog, Chennai. Building scalable backend REST APIs and responsive React applications.";
             break;
           case "projects":
-            response.innerHTML = "1. AI Lead Generation System<br>2. Task Management System<br>3. Employee Management System<br>Scroll to Projects section...";
+            response.innerHTML = "1. Relay – Team Collaboration Platform<br>2. AI Lead Generation System<br>3. Task Management System<br>Scroll to Projects section...";
             window.location.hash = "#projects";
             break;
           case "clear":
