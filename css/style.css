@@ -55,7 +55,6 @@ html[data-theme="light"] {
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -478,6 +477,7 @@ a {
   position: absolute;
   inset: 0;
   z-index: 0;
+  pointer-events: none;
 }
 
 .hero-gradient {

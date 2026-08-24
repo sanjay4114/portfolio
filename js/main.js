@@ -281,26 +281,7 @@
       );
     }
 
-    // Scroll parallax for section backgrounds/cards (lightweight)
-    const parallaxEls = [".hero-gradient", ".floating-socials"].map((s) => $(s)).filter(Boolean);
-    if (parallaxEls.length) {
-      let ticking = false;
-      const onScroll = () => {
-        if (!ticking) {
-          window.requestAnimationFrame(() => {
-            const y = window.scrollY || 0;
-            parallaxEls.forEach((el, i) => {
-              const f = i === 0 ? 0.08 : 0.05;
-              el.style.transform = `translate3d(0, ${y * f}px, 0)`;
-            });
-            ticking = false;
-          });
-          ticking = true;
-        }
-      };
-      onScroll();
-      window.addEventListener("scroll", onScroll, { passive: true });
-    }
+    // Scroll parallax removed for better scroll performance on laptops
   }
 
   function initCursor() {
